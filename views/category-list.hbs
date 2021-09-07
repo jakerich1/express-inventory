@@ -1,0 +1,15 @@
+<div class="middle-col">
+    <h1>{{title}}</h1><a href='/catalog/category/create' style="font-weight: 300; cursor: pointer;">Add Category</a>
+    <div class="all-category">
+        {{#if categories}}
+            <ul>
+            {{#each categories}}
+                <a class="pc-wrap" href={{this.url}}><li style="margin-bottom: 0.5em;">{{this.name}}</li></a>
+            {{/each}}
+            </ul>
+        {{/if}}
+    </div>
+</div>
+
+
+

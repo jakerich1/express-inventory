@@ -1,0 +1,31 @@
+<div class="middle-col">
+    <h1 style="text-align: center; margin-bottom: 1em;">{{title}}</h1>
+    {{#if brand}}
+        <div class="brand-col">
+            <img onerror="this.src='/images/placehold.jpg'" src={{brand.img_url}}>
+            <h1>{{brand.name}}</h1>
+        </div>
+        {{#if products.length}}
+            <h2 style="margin: 1em 0; text-align: center;">Unable to delete brand before the following products are deleted:</h2>      
+        {{/if}}
+        <div class="del-p-cont">
+            {{#each products as |products|}}
+                <a class="bpc-wrap" href='{{this.url}}'>
+                    <div class="bp-card">
+                        <img onerror="this.src='/images/placehold.jpg'" src={{this.img_url}}>
+                        <div>
+                            <h2>{{this.name}}</h2>
+                            <h2>£{{this.price}}</h2>
+                        </div>
+                    </div>
+                </a>
+                {{else}}
+                <h2 style="margin-top: 2em; text-align: center;">Are you sure you want to delete this brand?</h2>
+                <form class="delete-form" action='{{brand.url}}/delete' method="POST">
+                    <input type='hidden' name='brandid' required='true' value={{brand._id}}>
+                    <button type="submit" style="display: inline-block; margin: auto;">Delete</button>
+                </form>
+            {{/each}}
+        </div>
+    {{/if}}
+</div>

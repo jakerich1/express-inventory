@@ -1,0 +1,18 @@
+<div class="middle-col">
+    {{#if product}}
+    <div class="brand-col">
+        <img onerror="this.src='/images/placehold.jpg'" src={{product.img_url}}>
+        <h1>{{product.name}}</h1>
+        <h2>£{{product.price}}</h2>
+        <h3>Brand: <a style="font-weight: 300; text-decoration: none;" href={{product.brand.url}}>{{product.brand.name}}</a></h3>
+        <h3>Category: <a style="font-weight: 300; text-decoration: none;" href={{product.category.url}}>{{product.category.name}}</a></h3>
+    </div>
+    <div class="brand-summary">
+        <p>{{product.description}}</p>
+        <div class="brand-links">
+            <a href='{{product.url}}/delete'>Delete Product</a>
+            <a href='{{product.url}}/update'>Update Product</a>
+        </div>
+    </div>
+    {{/if}}
+</div>

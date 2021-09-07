@@ -1,0 +1,21 @@
+<div class="middle-col">
+    <h1>{{title}}</h1>
+    
+    <form method="post" action="">
+        <div class="input-group">
+            <div class="label">Category name</div>
+            <input type='text' name='name' value='{{#if category}}{{category.name}}{{/if}}' placeholder="Enter category name here" required='true'>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+
+    {{#if errors}}
+        <ul class="error-list">
+        {{#each errors}}
+            <li>{{this}}</li>
+        {{/each}}
+        </ul>
+    {{/if}}
+
+</div>
+

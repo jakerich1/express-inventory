@@ -1,0 +1,64 @@
+<div class="middle-col">
+    <h1>{{title}}</h1>
+    
+    <form method="post" action="">
+        <div class="input-group">
+            <div class="label">Name</div>
+            <input type='text' name='name' placeholder="Enter product name here" value="{{#if product}}{{product.name}}{{/if}}" required='true'>
+        </div>
+        <div class="input-group">
+            <div class="label">Price £</div>
+            <input type="number" name='price' min="0.01" step="0.01" placeholder="Enter price of product here" value="{{#if product}}{{product.price}}{{/if}}" required='true'>
+        </div>
+        <div class="input-group">
+            <div class="label">Description</div>
+            <textarea name="description" placeholder="Enter product description here" required='true'>{{#if product}}{{product.description}}{{/if}}</textarea>
+        </div>
+        <div class="input-group">
+            <div class="label">Image path</div>
+            <input type="text" name="imgurl" value="{{#if product}}{{product.img_path}}{{/if}}" placeholder="Enter product image path here">
+        </div>
+        <div class="input-group">
+            
+            {{#if brands}}
+            <div style="margin-bottom: 4px;" class="label">Select Brand</div>
+            <select name="brand">
+                <option value="{{product.brand._id}}" selected>{{product.brand.name}}</option>
+                {{#each brands}}
+                <option value={{this._id}}>{{this.name}}</option>
+                {{/each}}
+            </select>
+            {{else}}
+            <div class="label">Select Brand</div>
+            No brands found, please <a href="/catalog/brand/create" class="button-link">Create new brand</a>
+            {{/if}}
+
+        </div>
+        <div class="input-group">
+            
+            {{#if categories}}
+            <div class="label">Select Category</div>
+            <select name="category">
+                <option value="{{product.category._id}}" selected>{{product.category.name}}</option>
+                {{#each categories}}
+                <option value={{this._id}}>{{this.name}}</option>
+                {{/each}}
+            </select>
+            {{else}}
+            <div class="label" style='margin-bottom: 4px;'>Select Category</div>
+            No catagories found, please <a href="/catalog/category/create" class="button-link">Create new category</a>
+            {{/if}}
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+
+    {{#if errors}}
+        <ul class="error-list">
+        {{#each errors}}
+            <li>{{this.msg}}</li>
+        {{/each}}
+        </ul>
+    {{/if}}
+
+</div>
+

@@ -1,0 +1,30 @@
+<div class="middle-col">
+    {{#if category}}
+    <div class="brand-col">
+        <h1>{{category.name}}</h1>
+    </div>
+    <div class="brand-summary">
+        <div class="brand-links">
+            <a href='{{category.url}}/delete'>Delete Category</a>
+            <a href='{{category.url}}/update'>Update Category</a>
+        </div>
+    </div>
+    {{/if}}
+
+    <div class="brand-p-list">
+        {{#if products}}
+            <h2>Products</h2>
+            {{#each products}}
+            <a class="bpc-wrap" href='{{this.url}}'>
+                <div class="bp-card">
+                    <img onerror="this.src='/images/placehold.jpg'" src={{this.img_url}}>
+                    <div>
+                        <h2>{{this.name}}</h2>
+                        <h2>£{{this.price}}</h2>
+                    </div>
+                </div>
+            </a>
+            {{/each}}
+        {{/if}}
+    </div>
+</div>

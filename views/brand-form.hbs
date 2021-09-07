@@ -1,0 +1,33 @@
+<div class="middle-col">
+    <h1>{{title}}</h1>
+    
+    <form method="post" action="">
+        <div class="input-group">
+            <div class="label">Name</div>
+            <input type='text' name='name' placeholder="Enter brand name here" value='{{#if brand}}{{brand.name}}{{/if}}' required='true'>
+        </div>
+        <div class="input-group">
+            <div class="label">Website</div>
+            <input type='text' name='weburl' placeholder="Enter full web address here" value='{{#if brand}}{{brand.decoded_url}}{{/if}}' required='true'>
+        </div>
+        <div class="input-group">
+            <div class="label">Image path</div>
+            <input type='text' name='imgpath' placeholder="Enter image path here" value='{{#if brand}}{{brand.img_path}}{{/if}}'>
+        </div>
+        <div class="input-group">
+            <div class="label">Summary</div>
+            <textarea name="summary" placeholder="Enter brand summary here" required='true'>{{#if brand}}{{brand.summary}}{{/if}}</textarea>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+
+    {{#if errors}}
+        <ul class="error-list">
+        {{#each errors}}
+            <li>{{this.msg}}</li>
+        {{/each}}
+        </ul>
+    {{/if}}
+
+</div>
+

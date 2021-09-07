@@ -1,0 +1,33 @@
+<div class="middle-col">
+    {{#if brand}}
+    <div class="brand-col">
+        <img onerror="this.src='/images/placehold.jpg'" src={{brand.img_url}}>
+        <h1>{{brand.name}}</h1>
+        <h2>External site: <a href={{brand.decoded_url}}>{{brand.decoded_url}}</a></h2>
+    </div>
+    <div class="brand-summary">
+        <p>{{brand.summary}}</p>
+        <div class="brand-links">
+            <a href='{{brand.url}}/delete'>Delete Brand</a>
+            <a href='{{brand.url}}/update'>Update Brand</a>
+        </div>
+    </div>
+    {{/if}}
+
+    <div class="brand-p-list">
+        {{#if products}}
+            <h2>Products</h2>
+            {{#each products}}
+            <a class="bpc-wrap" href='{{this.url}}'>
+                <div class="bp-card">
+                    <img onerror="this.src='/images/placehold.jpg'" src={{this.img_url}}>
+                    <div>
+                        <h2>{{this.name}}</h2>
+                        <h2>£{{this.price}}</h2>
+                    </div>
+                </div>
+            </a>
+            {{/each}}
+        {{/if}}
+    </div>
+</div>

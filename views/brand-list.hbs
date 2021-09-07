@@ -1,0 +1,23 @@
+<div class="middle-col">
+    <h1>{{title}}</h1><a href='/catalog/brand/create' style="font-weight: 300; cursor: pointer;">Add Brand</a>
+    <div class="all-product">
+
+        {{#if brands}}
+            {{#each brands}}
+                <a class="pc-wrap" href={{this.url}}>
+                    <div class="product-card">
+                        <img onerror="this.src='/images/placehold.jpg'" src={{this.img_path}}>
+                        <div class='card-detail'>
+                            <div>
+                                <h3>{{this.name}}</h3>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            {{/each}}
+        {{/if}}
+    </div>
+</div>
+
+
+

@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+}
+
+h1{
+  color: black;
+  font-weight: 300;
+}
+
+a {
+  color: #00B7FF;
+}
+
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em;
+  background: rgb(12, 12, 12);
+}
+
+nav a{
+  text-decoration: none;
+}
+
+nav a h1{
+  color: white;
+  font-size: 42px;
+}
+
+nav .nav-link{
+  display: flex;
+}
+
+nav .nav-link a{
+  text-decoration: none;
+  color: white;
+  margin-right: 32px;
+  transition: all 0.2s ease-in-out;
+}
+
+nav .nav-link a:last-child{
+  margin-right: 0;
+}
+
+nav .nav-link a:hover{
+  color: #00B7FF;
+}
+
+nav .nav-link a p{
+  font-size: 28px;
+  font-weight: 300;
+}
+
+main{
+  padding: 1em;
+}
+
+.middle-col{
+  max-width: 1000px;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+form{
+  margin-top: 1em;
+}
+
+form button{
+  padding: 4px 16px;
+  background: white;
+  color: #00B7FF;
+  font-weight: 300;
+  font-size: 17px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid #00B7FF;
+  transition: all 0.2s ease-in-out;
+}
+
+form button:hover{
+  color: white;
+  background: #00B7FF;
+}
+
+form .input-group{
+  margin-bottom: 1em;
+}
+
+form .input-group .label{
+  font-weight: 300;
+  margin-bottom: 4px;
+}
+
+form .input-group input{
+  display: block;
+  width: 100%;
+  padding: 4px;
+  border-radius: 4px;
+  border: 1px solid rgb(168, 168, 168);
+  font-size: 17px;
+}
+
+form .input-group textarea{
+  display: block;
+  width: 100%;
+  padding: 4px;
+  border-radius: 4px;
+  border: 1px solid rgb(168, 168, 168);
+  font-size: 17px;
+}
+
+form .input-group select{
+  display: block;
+  width: 100%;
+  padding: 4px;
+  border-radius: 4px;
+  border: 1px solid rgb(168, 168, 168);
+  font-size: 17px;
+}
+
+.button-link{
+  border: 1px solid #00B7FF;
+  background: white;
+  color: #00B7FF;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  font-weight: 300;
+  font-size: 17px;
+  padding: 4px 16px;
+  border-radius: 4px;
+  margin-top: 8px;
+  text-decoration: none;
+}
+
+.button-link:hover{
+  color: white;
+  background: #00B7FF;
+}
+
+.error-list{
+  margin-top: 16px;
+}
+
+.all-product{
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns: repeat( auto-fit, minmax(200px, 300px) );
+  padding-top: 1em;
+}
+
+.pc-wrap{
+  text-decoration: none;
+  color: black;
+}
+
+.all-product .product-card h3{
+  font-weight: 300;
+}
+
+.all-product .product-card img{
+  width: 100%;
+  height: auto;
+}
+
+.all-product .product-card .card-detail{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 8px;
+}
+
+.all-category{
+  padding: 2em 0 0 0;
+}
+
+.all-category ul{
+  list-style-type: none;
+}
+
+.all-category ul a{
+  font-size: 32px;
+  font-weight: 300;
+  transition: all 0.2s ease-in-out;
+}
+
+.all-category ul a:hover{
+  filter: brightness(0.9)
+}
+
+.all-category ul a li{
+  border: 1px solid black;
+  padding: 0.5em;
+  cursor: pointer;
+  background: white;
+}
+
+.brand-col{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.brand-col img{
+  height: 200px;
+  width: auto;
+}
+
+.brand-summary{
+  width: 80%;
+  margin: auto;
+}
+
+.brand-summary .brand-links{
+  padding: 1em;
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+}
+
+.brand-summary .brand-links a{
+  font-weight: 300;
+}
+
+.brand-summary p{
+  text-align: center;
+}
+
+.brand-p-list{
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+}
+
+.brand-p-list h2{
+  margin-bottom: 1em;
+}
+
+.bpc-wrap{
+  text-decoration: none;
+  color: black;
+}
+
+.bp-card{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.bp-card img{
+  height: 150px;
+  width: auto;
+}
+
+.delete-form{
+  display: flex;
+  justify-content: center;
+}
+
+.del-p-cont{
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+}
